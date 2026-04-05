@@ -1,0 +1,111 @@
+@font-face {
+    font-family: horror;
+    src: url(./font/Roomach-Regular.ttf);
+}
+
+@font-face {
+    font-family: nothing;
+    src: url(./font/Ndot-55.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #0b0b0b;
+   
+   
+}
+
+
+
+p{
+    color: royalblue;
+    font-size: 100px  ;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+}
+#first{
+    /* color: orange; */
+    background-color: orange;
+}
+#Second{
+    color: blue;
+    background-color: white;
+}
+#Third{
+    /* color: green   ; */
+    background-color: green   ;
+}
+
+.fattu{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#lapa{
+    color: black;
+    background-color: white;
+    font-family: nothing;
+    text-transform: capitalize;
+}
+
+/* div{
+    height: 200px;
+    width: 200px;
+    background-color    : red;
+    text-align: center;
+    margin-left: 40% ;
+    margin-top: 25% ;
+} */
+
+#class{
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(red, yellow, green);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+}
+.id{
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(blue, pink, purple);
+    
+    margin: auto;
+    margin-top: 100px;
+}
+
+#circle{
+    height: 400px;
+    width: 400px;
+    background: radial-gradient(red,orange, blue);
+   
+    margin: auto;
+    margin-top: 50px;
+}
+
+#conic{
+    height: 400px;
+    width: 400px;
+    background: conic-gradient(red,orange, blue, purple, red);
+   
+    margin: auto;
+    margin-top: 50px;
+}
