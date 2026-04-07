@@ -15,6 +15,7 @@ body, html{
    display: flex;
    gap: 20px;
    flex-wrap: wrap;
+   flex-shrink: 0;
    
     
 }
@@ -55,4 +56,5 @@ body, html{
     border: 2px solid black ;
     border-radius: 15px;
     cursor: pointer;
+     transform: scale(1.5);
 }
