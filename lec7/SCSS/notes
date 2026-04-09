@@ -1,0 +1,282 @@
+        SCSS (Complete Notes)
+1. What is SCSS
+
+SCSS (Sassy CSS) is an extension of CSS that adds powerful programming-like features such as variables, nesting, mixins, and functions. It makes writing and managing large CSS files easier.
+
+SCSS is part of SASS (Syntactically Awesome Style Sheets).
+SCSS syntax is almost the same as CSS.
+It must be compiled into normal CSS before the browser can read it.
+
+Example:
+
+SCSS
+
+$color: red;
+
+h1{
+  color: $color;
+}
+
+Compiled CSS
+
+h1{
+  color:red;
+}
+2. Why SCSS is Used
+
+When CSS becomes large in big projects, it becomes difficult to maintain.
+
+SCSS solves this problem by providing:
+
+Variables
+Nesting
+Mixins
+Inheritance
+Functions
+Modular code structure
+
+Benefits:
+
+Cleaner code
+Reusable styles
+Easier maintenance
+Faster development
+3. Difference Between CSS and SCSS
+CSS	SCSS
+Plain styling language	CSS preprocessor
+No variables	Supports variables
+No nesting	Supports nesting
+Repetition of code	Reusable code
+Hard to maintain large files	Easy to manage large projects
+4. Installing SCSS
+
+Install using Node.js (npm)
+
+npm install -g sass
+
+Compile SCSS file:
+
+sass style.scss style.css
+
+Watch mode:
+
+sass --watch style.scss:style.css
+5. SCSS Variables
+
+Variables store reusable values like colors, fonts, or spacing.
+
+Syntax:
+
+$variableName: value;
+
+Example:
+
+$primaryColor: blue;
+
+h1{
+ color:$primaryColor;
+}
+
+Advantages:
+
+Avoid repeating values
+Easy theme changes
+6. Nesting in SCSS
+
+SCSS allows writing CSS in a nested structure similar to HTML.
+
+Example HTML
+
+<nav>
+  <ul>
+    <li>Home</li>
+  </ul>
+</nav>
+
+SCSS
+
+nav{
+  ul{
+    list-style:none;
+  }
+
+  li{
+    display:inline-block;
+  }
+}
+
+Compiled CSS
+
+nav ul{
+ list-style:none;
+}
+
+nav li{
+ display:inline-block;
+}
+
+This improves readability.
+
+7. Partials in SCSS
+
+Partials are smaller SCSS files used to organize code.
+
+Example:
+
+_variables.scss
+_header.scss
+_footer.scss
+
+Import them into main file:
+
+@import "variables";
+@import "header";
+8. Mixins
+
+Mixins allow reusable blocks of CSS.
+
+Syntax
+
+@mixin name{
+   styles
+}
+
+Example
+
+@mixin center{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+
+.box{
+ @include center;
+}
+
+Output CSS
+
+.box{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+9. Inheritance (Extend)
+
+SCSS allows sharing styles between selectors.
+
+Example
+
+.button{
+ padding:10px;
+ border-radius:5px;
+}
+
+.primary{
+ @extend .button;
+ background:blue;
+}
+10. Functions in SCSS
+
+SCSS provides built-in functions for colors and math.
+
+Example
+
+$color: blue;
+
+.box{
+ background: darken($color,10%);
+}
+
+Other functions:
+
+lighten()
+darken()
+rgba()
+percentage()
+11. Operators in SCSS
+
+SCSS supports mathematical operations.
+
+Example
+
+.container{
+ width:100% - 20%;
+}
+
+Operators:
+
++
+-
+*
+/
+%
+12. SCSS File Structure (Best Practice)
+scss/
+  main.scss
+  _variables.scss
+  _header.scss
+  _footer.scss
+  _buttons.scss
+
+Then import everything in main.scss.
+
+13. SCSS Workflow
+
+Developer writes:
+
+style.scss
+
+Compiler converts it into:
+
+style.css
+
+Browser only reads:
+
+style.css
+14. Real Example
+
+SCSS
+
+$primary: #3498db;
+
+.card{
+ background:$primary;
+ padding:20px;
+
+ h2{
+   color:white;
+ }
+
+ button{
+   background:white;
+   color:$primary;
+ }
+}
+
+Compiled CSS
+
+.card{
+ background:#3498db;
+ padding:20px;
+}
+
+.card h2{
+ color:white;
+}
+
+.card button{
+ background:white;
+ color:#3498db;
+}
+Quick Revision
+
+SCSS Features:
+
+Variables
+Nesting
+Mixins
+Extend
+Functions
+Operators
+Partials
+Modular CSS
